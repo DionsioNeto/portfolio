@@ -7,12 +7,16 @@ import { createApp } from 'vue'
 
 // FONT AWESOME
 import { library } from '@fortawesome/fontawesome-svg-core'
+import { faPhone, faCarOn, faUser, faEnvelope, } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faCarOn } from '@fortawesome/free-solid-svg-icons'
+
+// ONLY US THIS ICONS:
+library.add(faPhone, faUser, faEnvelope);  
+
+/* <fa icon="envelope" /> */
 
 
 import App from './App.vue'
-
 
 // VUE ROUTER
 import { createRouter, createWebHistory } from 'vue-router'

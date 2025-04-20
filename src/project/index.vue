@@ -1,15 +1,13 @@
-<template>
-  <h1>Home</h1>
+<script setup>
+import the from '../components/the.vue'
 
-  <RouterLink to="/">Go to Home</RouterLink> | <RouterLink to="/about">Go to About</RouterLink>
-</template>
 
-<script>
-export default {
-
-}
 </script>
 
-<style>
 
-</style>
+<template>
+  <the />
+
+
+
+</template>
