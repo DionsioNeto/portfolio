@@ -5,20 +5,20 @@ import { createApp } from 'vue'
 
 // FONT AWESOME
 import { library } from '@fortawesome/fontawesome-svg-core'
-
 import { 
   faPhone, 
   faUser, 
   faEnvelope, 
   faBars,
   faComment,
+  faEquals
 } 
 from '@fortawesome/free-solid-svg-icons'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 // ONLY US THIS ICONS:
-library.add(faPhone, faUser, faEnvelope, faBars, faComment,);  
+library.add(faPhone, faUser, faEnvelope, faBars, faComment, faEquals);  
 
 import App from './App.vue'
 
