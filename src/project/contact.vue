@@ -1,197 +1,79 @@
 <script setup>
-import foot from '../components/theFooter.vue'
+import theFooter from '../components/theFooter.vue'
 import theHeader from '../components/theHeader.vue'
+import { Copy,CopyCheck , Share2, Send, Mail, Smartphone } from 'lucide-vue-next';
 </script>
 
 <template>
     <theHeader />
-    <section class="contact">
-        <div class="text-content">
-            <div class="title">
-                Contact
+    <main class="container m-auto p-3">
+        <h1 class="text-4xl font-black text-center mb-5">Contact</h1>
+        <div class="grid md:grid-cols-2 gap-4 h-auto">
+            <div class="row-span-2 border-2 border-neutral-700/50 p-5 rounded-lg w-full h-full">
+                <h1 class="text-2xl text-neutral-500 font-semibold">Fique à vontade para falar comigo</h1>
+                <p class="text-neutral-500 text-xs font-bold">
+                    Fique a vontade para expressar qualquer dúvida, inquientação ou qualquer outro assunto ;-)
+                </p>
+                <form action="#" method="post">
+                    <div class="flex flex-col gap-2">
+                        <div class="flex flex-col gap-1">
+                            <label for="Name">Name</label>
+                            <input type="text" placeholder="Writte your name" id="Name" class="border-2 dark:bg-neutral-800/50 border-neutral-800 p-1 rounded-lg">
+                        </div>
+                        <div class="flex flex-col sm:flex-row w-full gap-1">
+                            <div class="flex flex-col gap-1 w-full">
+                                <label for="email">E-mail</label>
+                                <input type="text" placeholder="Writte your name" id="email" class="border-2 dark:bg-neutral-800/50 border-neutral-800 p-1 w-full rounded-lg">
+                            </div>
+                            <div class="flex flex-col gap-1 w-full">
+                                <label for="numbber">Phone numbber</label>
+                                <input type="text" placeholder="Writte your name" id="numbber" class="border-2 dark:bg-neutral-800/50 border-neutral-800 p-1 w-full rounded-lg">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <label for="message">Content</label>
+                            <textarea placeholder="Writte your name" id="message" class="border-2 dark:bg-neutral-800/50 border-neutral-800 p-1 h-34 rounded-lg"></textarea>
+                            <p class="text-xs">Todo e qualquer mensagem submetido é lida apenas por mim (Dionísio Neto).</p>
+                        </div>
+                        <button type="submit" class="dark:bg-white bg-black dark:text-black text-white flex items-center gap-2 font-semibold rounded-lg p-1.5 w-36">
+                            <Send :size="18"/>
+                            Send message
+                        </button>
+                    </div>
+                </form>
             </div>
-            <h1>
-                Have you any project? <br> Drop a message!
-            </h1>
-            <p>
-                Get in touch and let me know if I can help!
-                Fill out the form and I'll be in touch as soon as possible
-            </p>
-            <ul>
-                <li>
-                    <div class="box-find-me">
-                        <fa icon="envelope"></fa>
-                        <div>
-                            <h3>Address</h3>
-                            <p>Luanda, Angola</p>
-                        </div>
+
+            <div class="border-2 border-neutral-700/50 p-5 rounded-lg w-full h-60 md:h-full flex justify-center items-center flex-col gap-2 relative overflow-hidden">
+                <div class="absolute -bottom-12 left-0 rotate-40 -z-2">
+                    <Mail :size="210" color="#4a4a4a"/>
+                </div>
+                <h1>Send me a Email</h1>
+                <a href="mailto:dionisioni304@gmail.com">dionisioni304@gmail.com</a>
+                <div class="flex gap-2">
+                    <div class="border-2 border-neutral-700/50 p-1 rounded-lg bg-neutral-800/50">
+                        <Copy /> <CopyCheck/>
                     </div>
-                </li>
-                <li>
-                    <div class="box-find-me">
-                        <fa icon="phone"></fa>
-                        <div>
-                            <h3>Phone</h3>
-                            <a href="tel:+">(+244) 923 287 660</a>
-                        </div>
+                    <div class="border-2 border-neutral-700/50 p-1 rounded-lg bg-neutral-800/50">
+                        <Share2 />
                     </div>
-                </li>
-                <li>
-                    <div class="box-find-me">
-                        <fa icon="envelope"></fa>
-                        <div>
-                            <h3>Email</h3>
-                            <a href="mailto:">dionisioni304@gmail.com</a>
-                        </div>
+                </div>
+            </div>
+            <div class="border-2 border-neutral-700/50 p-5 rounded-lg w-full h-60 md:h-full flex justify-center items-center flex-col gap-2 relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 -rotate-25 -z-2">
+                    <Smartphone :size="210" color="#4a4a4a"/>
+                </div>
+                <h1>Call or message me / whatsApp</h1>
+                <a href="tel:+244923287660">+244 923 287 660</a>
+                <div class="flex gap-2">
+                    <div class="border-2 border-neutral-700/50 p-1 rounded-lg bg-neutral-800/50">
+                        <Copy /><CopyCheck/>
                     </div>
-                </li>
-            </ul>
-                     
-            
+                    <div class="border-2 border-neutral-700/50 p-1 rounded-lg bg-neutral-800/50">
+                        <Share2 />
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="form-content">
-            <label for="name">
-                <span>Name</span>
-                <div class="input">
-                    <fa icon="user"></fa>
-                    <input type="text" placeholder="Your Name" id="name">
-                </div>
-            </label>
-
-            <label for="email">
-                <span>Email</span>
-                <div class="input">
-                    <fa icon="envelope"></fa>
-                    <input type="text" placeholder="email@domain.com" id="email">
-                </div>
-            </label>
-
-            <label for="phone">
-                <span>Phone</span>
-                <div class="input">
-                    <fa icon="phone"></fa>
-                    <input type="text" placeholder="Phone Number" id="phone">
-                </div>
-            </label>
-
-            <label for="message">
-                <span>Message</span>
-                <div class="input">
-                    <fa icon="comment"></fa>
-                    <textarea id="message" placeholder="Write Your Message"></textarea>
-                </div>
-            </label>
-
-            <fa icon=""></fa>
-
-            <input type="button" value="SEND">
-        </div>
-    </section>
-
-    <foot />
+    </main>
+    <theFooter />
 </template>
-
-<style>
-    section.contact{
-        display: flex;
-        justify-content: space-around;
-        padding: 115px;
-        gap: 10px;
-    }
-
-    div.text-content{
-        max-width: 535px;
-    }
-
-    div.text-content h1{
-        font-size: 40px;
-        margin-bottom: 20px;
-    }
-
-    div.text-content p{
-        font-weight: 300;
-        margin-bottom: 20px;
-    }
-
-    div.text-content ul{
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    div.text-content .box-find-me{
-        display: flex;
-        gap: 25px;
-    }
-
-    div.text-content .box-find-me a,
-    div.text-content .box-find-me p{
-        font-weight: 300;
-        margin-top: 10px;
-    }
-
-    section.contact div.form-content{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        background-color: var(--bg-secondary);
-        border-radius: var(--radius-1);
-        padding: 15px 20px;
-        border-radius: 15px;
-        width: 535px;
-    }
-
-    section.contact div.form-content label{
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    section.contact div.form-content label span{
-        font-size: var(--fs-6);
-        font-weight: 200;
-    }
-
-    section.contact div.form-content label div.input{
-        display: flex;
-        gap: 10px;
-        background-color: var(--input-bg);
-        border-radius: 8px;
-        padding: 10px;
-        color: var(--raw-seinna);
-    }
-
-    section.contact div.form-content label div.input textarea{
-        height: 100px;
-    }
-
-    section.contact div.form-content input[type="button"]{
-        background-color: #1f1f1f;
-        color: var(--white);
-        padding: 10px;
-        border-radius: 8px;
-    }
-
-    @media screen and (max-width: 1000px) {
-        section.contact{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-        }
-
-        section.contact div.form-content{
-            max-width: 100%;
-        }
-    }
-
-    @media screen and (max-width: 700px){
-        section.contact{
-            display: flex;
-            justify-content: space-around;
-            padding: 80px 20px;
-            gap: 20px;
-        }
-    }
-</style>
