@@ -43,7 +43,7 @@
 </script>
 <template>
   <theHeader />
-  <main class="sm:w-[65vw] m-auto border-l border-r border-neutral-500 -mt-10">
+  <main class="w-dvh sm:w-[65vw] m-auto border-l border-r border-neutral-500 -mt-10">
     <section class="flex flex-col gap-5 justify-center items-center p-5 min-h-[100vh]">
       <div class="h-40 w-40 rounded-full border-2 border-neutral-500 relative overflow-hidden mt-10">
         <img src="./dn.jpg" alt="" class="absolute w-full h-full object-cover">
@@ -216,7 +216,7 @@
     </div>
     <section class=" container m-auto flex flex-col gap-7 justify-center items-center px-5 py-7 min-h-100">
       <h1 class="text-4xl font-bold text-center">Conctaco</h1>
-      <p class="text-center w-110">Agradeço imenso por visitar o meu site pessoal, e se quiser falar comig sobre alguma coisa, seja ela qual for, pode entrar em contacto comigo clicando abaixo! ;-) </p>
+      <p class="text-center max-w-110">Agradeço imenso por visitar o meu site pessoal, e se quiser falar comig sobre alguma coisa, seja ela qual for, pode entrar em contacto comigo clicando abaixo! ;-) </p>
       <RouterLink to="/contact" class="flex gap-3 dark:bg-white bg-black dark:text-black text-white rounded-md py-2 px-3 font-bold" title="Say with me!"><MessagesSquare/>Say with me!</RouterLink>
     </section>
     <TheFooter />
