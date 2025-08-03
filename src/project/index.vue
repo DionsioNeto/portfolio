@@ -42,8 +42,8 @@
   }
 </script>
 <template>
-  <theHeader />
   <main class="w-dvh sm:w-[65vw] m-auto border-l border-r border-neutral-500 -mt-10">
+    <theHeader />
     <section class="flex flex-col gap-5 justify-center items-center p-5 min-h-[100vh]">
       <div class="h-40 w-40 rounded-full border-2 border-neutral-500 relative overflow-hidden mt-10">
         <img src="./dn.jpg" alt="" class="absolute w-full h-full object-cover">
@@ -63,13 +63,28 @@
         </div>
       </div>
       <div class="flex gap-3 items-center">
-        <a href="" class="dark:hover:bg-neutral-800 p-1 rounded-lg">
+        <a
+          href="https://github.com/DionsioNeto" 
+          title="https://github.com/DionsioNeto" 
+          target="_blank" 
+          class="dark:hover:bg-neutral-800 p-1 rounded-lg"
+        >
           <IconGithub class="h-5"/>
         </a>
-        <a href="" class="dark:hover:bg-neutral-800 p-1 rounded-lg">
+        <a 
+          href="https://x.com/dionsio14" 
+          title="https://x.com/dionsio14" 
+          target="_blank" 
+          class="dark:hover:bg-neutral-800 p-1 rounded-lg"
+        >
           <InconXTwitter class="h-5"/>
         </a>
-        <a href="" class="dark:hover:bg-neutral-800 p-1 rounded-lg">
+        <a
+          href="https://www.linkedin.com/in/dion%C3%ADsioneto/" 
+          title="https://www.linkedin.com/in/dionísioneto/" 
+          target="_blank" 
+          class="dark:hover:bg-neutral-800 p-1 rounded-lg"
+        >
           <IconLinkedin class="h-6"/>
         </a>
       </div>
@@ -96,94 +111,101 @@
     </section>
 
     <section class="flex flex-col md:flex-row gap-7 px-5 sm:px-15 py-15">
-      <div class="w-full">tecs</div>
-      <div class="w-full grid grid-cols-4 gap-3">
-        <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <IconHtml class="h-8"/>
-        </div>
-
-        <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <IconCss class="h-8"/>
-        </div>
-
-        <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <IconJs class="h-8"/>
-        </div>
-
-        <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <IconGit class="h-8"/>
-        </div>
-
-        <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <IconPhp class="h-9"/>
-        </div>
-
-        <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <IconSql class="h-8"/>
-        </div>
-
-        <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <IconGithub class="h-8"/>
-        </div>
-        
-        <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <IconC class="h-8"/>
-        </div>
-
-        <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <IconLaravel class="h-8"/>
-        </div>
+      <div class="w-full">
+        <h1 class="text-3xl font-bold mb-2">Some tools and tecs, used by me</h1>
+        <p class="text-neutral-500 font-medium">
+          As web developer full-stack with 6 month of experience,
+        </p>
+      </div>
+      <div class="flex justify-center items-center w-full">
+        <div class="grid grid-cols-6 gap-3">
+          <div class="bg-neutral-300 dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
+            <IconHtml class="h-8"/>
+          </div>
 
           <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <IconLivewire class="h-8"/>
-        </div>
-
-        <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <IconPostgre class="h-8"/>
-        </div>
-
-        <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <IconMysql class="h-8"/>
-        </div>
-
-        <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <IconVue class="h-8"/>
-        </div>
-        
-          <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <IconSass class="h-8"/>
-        </div>
+            <IconCss class="h-8"/>
+          </div>
 
           <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <IconBootstrap class="h-8"/>
-        </div>
+            <IconJs class="h-8"/>
+          </div>
 
           <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <IconTailwindcss class="h-8"/>
-        </div>
+            <IconGit class="h-8"/>
+          </div>
 
           <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <other class="h-8"/>
-        </div>
-        
-        <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <IconDocker class="h-8"/>
-        </div>
-        
-        <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <IconComposer class="h-8"/>
-        </div>
-        
-        <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <IconVscode class="h-8"/>
-        </div>
+            <IconPhp class="h-9"/>
+          </div>
 
-        <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <IconNpm class="h-8"/>
-        </div>
+          <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
+            <IconSql class="h-8"/>
+          </div>
 
-        <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-          <IconInsomnia class="h-8"/>
+          <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
+            <IconGithub class="h-8"/>
+          </div>
+          
+          <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
+            <IconC class="h-8"/>
+          </div>
+
+          <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
+            <IconLaravel class="h-8"/>
+          </div>
+
+            <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
+            <IconLivewire class="h-8"/>
+          </div>
+
+          <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
+            <IconPostgre class="h-8"/>
+          </div>
+
+          <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
+            <IconMysql class="h-8"/>
+          </div>
+
+          <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
+            <IconVue class="h-8"/>
+          </div>
+          
+            <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
+            <IconSass class="h-8"/>
+          </div>
+
+            <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
+            <IconBootstrap class="h-8"/>
+          </div>
+
+            <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
+            <IconTailwindcss class="h-8"/>
+          </div>
+
+            <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
+            <other class="h-8"/>
+          </div>
+          
+          <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
+            <IconDocker class="h-8"/>
+          </div>
+          
+          <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
+            <IconComposer class="h-8"/>
+          </div>
+          
+          <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
+            <IconVscode class="h-8"/>
+          </div>
+
+          <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
+            <IconNpm class="h-8"/>
+          </div>
+
+          <div class="dark:bg-neutral-800 p-1 rounded-lg w-12 h-12 flex items-center justify-center">
+            <IconInsomnia class="h-8"/>
+          </div>
         </div>
       </div>
     </section>
@@ -191,7 +213,7 @@
      <div
       v-for="(item, index) in items"
       :key="index"
-      class="select-none mx-20"
+      class="select-none max-w-150"
     >
       <div @click="toggle(index)" class="flex items-center justify-between bg-neutral-900 my-2 p-2 rounded-lg">
         <h2 class="text-lg font-mediu">

@@ -5,9 +5,9 @@ import { Copy,CopyCheck , Share2, Send, Mail, Smartphone } from 'lucide-vue-next
 </script>
 
 <template>
-    <theHeader />
-    <main class="container m-auto p-3">
-        <h1 class="text-4xl font-black text-center mb-5">Contact</h1>
+    <main class="cw-dvh sm:w-[65vw] m-auto border-l border-r border-neutral-500 p-2">
+        <theHeader />
+        <h1 class="text-4xl font-black text-center my-5">Contact</h1>
         <div class="grid md:grid-cols-2 gap-4 h-auto">
             <div class="row-span-2 border-2 border-neutral-700/50 p-5 rounded-lg w-full h-full">
                 <h1 class="text-2xl text-neutral-500 font-semibold">Fique à vontade para falar comigo</h1>
@@ -20,7 +20,7 @@ import { Copy,CopyCheck , Share2, Send, Mail, Smartphone } from 'lucide-vue-next
                             <label for="Name">Name</label>
                             <input type="text" placeholder="Writte your name" id="Name" class="border-2 dark:bg-neutral-800/50 border-neutral-800 p-1 rounded-lg">
                         </div>
-                        <div class="flex flex-col sm:flex-row w-full gap-1">
+                        <div class="flex flex-col lg:flex-row w-full gap-1">
                             <div class="flex flex-col gap-1 w-full">
                                 <label for="email">E-mail</label>
                                 <input type="text" placeholder="Writte your name" id="email" class="border-2 dark:bg-neutral-800/50 border-neutral-800 p-1 w-full rounded-lg">
@@ -74,6 +74,6 @@ import { Copy,CopyCheck , Share2, Send, Mail, Smartphone } from 'lucide-vue-next
                 </div>
             </div>
         </div>
-    </main>
     <theFooter />
+    </main>
 </template>

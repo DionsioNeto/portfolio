@@ -11,12 +11,15 @@ const tabs = [
 <template>
   <header class="z-2 mx-auto w-fit rounded-full sticky py-1 px-3 backdrop-blur-xs top-3 borde-2 dark:bg-neutral-900/50 border-neutral-200 dark:border-neutral-700 shadow-lg shadow-neutral-200/50 dark:shadow-neutral-950/50">
     <nav>
-      <ul class="flex items-center gap-2">
+      <ul class="flex items-center gap-2 font-medium">
         <li>
           <RouterLink to="/">Home</RouterLink>
         </li>
         <li>
           <RouterLink to="/contact">Contact</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/about">About me</RouterLink>
         </li>
         <li>
           <div class="inline-flex gap-1 rounded-full p-1 bg-neutral-100/100 dark:bg-neutral-800/100">
