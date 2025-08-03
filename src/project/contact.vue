@@ -91,11 +91,10 @@ function share(content) {
                             <label for="message">Message</label>
                             <textarea 
                                 name="message"
-                                placeholder="Enter your phone number" 
+                                placeholder="Enter your message" 
                                 id="message" 
                                 class="border-2 dark:bg-neutral-800/50 border-neutral-800 p-1 h-34 rounded-lg"
-                            >
-                            </textarea>
+                            ></textarea>
                             <p class="text-xs">Every message submitted is read only by me (Dionísio Neto).</p>
                         </div>
                         <button type="submit" class="dark:bg-white bg-black dark:text-black text-white flex items-center gap-2 font-semibold rounded-lg p-1.5 w-36">
