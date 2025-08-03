@@ -10,6 +10,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import nf from './project/notFoundPage.vue'
 import index from './project/index.vue'
 import contact from './project/contact.vue'
+import about from './project/about.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -17,6 +18,7 @@ const router = createRouter({
       { path: '/:pathMatch(.*)*', name: '404', component: nf },
       { path: '/', component: index },
       { path: '/contact', component: contact },
+      { path: '/about', component: about },
     ],
 })
 
