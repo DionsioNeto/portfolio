@@ -42,18 +42,18 @@ function share(content) {
 </script>
 
 <template>
-    <main class="cw-dvh sm:w-[65vw] m-auto border-l border-r border-neutral-500 p-2">
+    <main class="sm:w-[65vw] m-auto border-l border-r border-neutral-500 p-4">
         <theHeader />
         <h1 class="text-4xl font-black text-center my-5">Contact</h1>
         <div class="grid md:grid-cols-2 gap-4 h-auto">
             <div class="row-span-2 border-2 border-neutral-700/50 p-5 rounded-lg w-full h-full font-medium">
-                <h1 class="text-2xl text-neutral-500 font-semibold">Feel free to talk to me.</h1>
-                <p class="text-neutral-500 text-xs font-bold">
+                <h1 class="text-2xl text-neutral-600 font-semibold">Feel free to talk to me.</h1>
+                <p class="text-xs font-bold">
                     You're welcome to share any questions, concerns, or anything else you'd like to discuss ;-)
                 </p>
                 <form action="https://formsubmit.co/dionisioni304@gmail.com" method="POST">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://dionisio-neto.netlify.app/">
+                    <input type="hidden" name="_next" value="https://dionisio-neto.netlify.app/message-send">
                     <div class="flex flex-col gap-2">
                         <div class="flex flex-col gap-1">
                             <label for="Name">Name</label>
