@@ -30,6 +30,9 @@
   import  IconInertia from '@/icon/IconInertia.vue';
   import IconTS from '@/icon/IconTS.vue';
   import IconAlpine from '@/icon/IconAlpine.vue';
+  import IconTrello from '@/icon/IconTrello.vue';
+  import IconJava from '@/icon/IconJava.vue';
+  import IconSpringBot from '@/icon/IconSpringBot.vue';
   import { ref } from 'vue'
 
   const langTec = ref(true)
@@ -169,6 +172,10 @@
             <IconC class="h-8"/>
           </div>
 
+          <div v-if="langTec" class="bg-neutral-300 dark:bg-neutral-900 p-1 rounded-lg w-12 h-12 flex items-center justify-center" title="Trello">
+            <IconTrello class="h-8"/>
+          </div>
+
           <div v-if="langTec" class="bg-neutral-300 dark:bg-neutral-900 p-1 rounded-lg w-12 h-12 flex items-center justify-center" title="Laravel PHP">
             <IconLaravel class="h-8"/>
           </div>
@@ -236,6 +243,17 @@
           <div v-if="langTec" class="bg-neutral-300 dark:bg-neutral-900 p-1 rounded-lg w-12 h-12 flex items-center justify-center" title="NPM">
             <IconNpm class="h-8"/>
           </div>
+
+           <div class="bg-neutral-300 dark:bg-neutral-900 p-1 rounded-lg w-12 h-12 flex items-center justify-center" title="Java">
+            <IconJava class="h-8"/>
+          </div>
+
+          <div class="bg-neutral-300 dark:bg-neutral-900 p-1 rounded-lg w-12 h-12 flex items-center justify-center" title="Spring">
+            <IconSpringBot class="h-8"/>
+          </div>
+
+                
+     
 
           <div v-if="langTec" class="bg-neutral-300 dark:bg-neutral-900 p-1 rounded-lg w-12 h-12 flex items-center justify-center" title="Insomnia">
             <IconInsomnia class="h-8"/>
