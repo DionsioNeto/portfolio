@@ -4,8 +4,19 @@
   import IconGithub from '@/icon/IconGithub.vue';
   import InconXTwitter from '@/icon/InconXTwitter.vue';
   import IconLinkedin from '@/icon/IconLinkedin.vue';
-  import { MoveUpRight, X } from 'lucide-vue-next';
+  import Modal from '../components/modal.vue';
+  import { MoveUpRight, X, Download } from 'lucide-vue-next';
+
   import { ref } from 'vue';
+  const toggleModal = ref(false)
+
+  function nn(){
+    toggleModal.value = !toggleModal.value
+  }
+
+  const showModal = ref(false)
+
+
   const items = [
     {
       title: 'About me',
@@ -85,8 +96,7 @@
       <div class="w-full mt-5">
         <h1 class="text-3xl font-bold mb-2">About</h1>
         <p class="text-neutral-500 font-medium">
-          As web developer full-stack with 6 month of experience. <br>
-          I’m always striving to do my best, learn from others, and deliver with quality. I enjoy collaborative experiences, closing challenges, and leaving everything well-resolved — without forgetting attention to detail.
+          I’m Dionísio Neto, an aspiring IT professional passionate about solving problems and creating innovative solutions. I hold a high school diploma in computer science and am currently pursuing a degree in computer engineering. With a strong foundation in technology and a drive to learn, I’m ready to bring value, creativity, and dedication to any challenge in the IT field.
         </p>
       </div>
       
@@ -128,7 +138,7 @@
         </ul>
       </div>
     </section>
-    <section class="px-5 sm:px-15">
+    <section class="px-5 sm:px-15 mt-5">
       <h1 class="text-3xl font-bold mb-2">Curiosities</h1>
         <p class="text-neutral-500 font-medium">Some facts about me</p>
       <div
@@ -160,7 +170,10 @@
     </section>
 
 
-    <section class="w-full flex justify-center items-center py-2">
+    <section 
+      @click="showModal = true"
+      class="w-full flex justify-center items-center py-2 cursor-pointer"
+    >
       <div class="dark:bg-white bg-black rounded-full dark:text-black text-white flex justify-between items-center w-34 p-1">
           <div class="font-bold">see resume</div>
           <div class="dark:bg-black bg-white p-1 rounded-full dark:text-white text-black">
@@ -169,6 +182,26 @@
       </div>
     </section>
 
+    <teleport to="body">
+      <Modal :show="showModal" @close="showModal = false">
+        <template #header>
+          Resume
+        </template>
+
+        <template #body>
+          <img src="../assets/img/dn3.jpg" alt="Dionísio Neto" class="max-w-20 md:max-w-full rounded-xl">
+        </template>
+
+        <template #footer>
+          <button
+            class=""
+            @click="$emit('close')"
+          >
+            <Download/>
+          </button>
+        </template>
+      </Modal>
+    </teleport>
     
     
      
