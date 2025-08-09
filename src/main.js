@@ -11,6 +11,7 @@ import nf from './project/notFoundPage.vue'
 import index from './project/index.vue'
 import contact from './project/contact.vue'
 import about from './project/about.vue';
+import message from './project/message.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -19,6 +20,7 @@ const router = createRouter({
       { path: '/', component: index },
       { path: '/contact', component: contact },
       { path: '/about', component: about },
+      { path: '/message-send', component: message},
     ],
 })
 
