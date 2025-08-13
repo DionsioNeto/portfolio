@@ -7,6 +7,9 @@ import App from './App.vue'
 // VUE ROUTER
 import { createRouter, createWebHistory } from 'vue-router'
 
+// VUE I18N
+import { i18n } from './i18n'
+
 import nf from './project/notFoundPage.vue'
 import index from './project/index.vue'
 import contact from './project/contact.vue'
@@ -26,4 +29,5 @@ const router = createRouter({
 
 createApp(App)
   .use(router)
+  .use(i18n)
   .mount('#app')
