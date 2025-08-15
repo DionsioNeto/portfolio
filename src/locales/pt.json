@@ -1,0 +1,59 @@
+{
+    "Home": "Inicio",
+    "Contact": "Contacto",
+    "About": "Sobre",
+    "Available for work": "Disponível para trabalhar",
+    "Say with me": "Fale comigo",
+    "Hey, I am Dionísio Neto, a systems developer.": "Olá, eu sou Dionísio Neto.",
+    "about me": "Sou Dionísio Neto, um aspirante a profissional de TI, apaixonado por resolver problemas e criar soluções inovadoras. Tenho o ensino médio em informática e atualmente curso a graduação em engenharia informática. Com uma base sólida em tecnologia e vontade de aprender, estou pronto para agregar valor, criatividade e dedicação a qualquer desafio na área de TI.",
+    "System developer, university student in computer engineering, with a high school diploma in computer science.": "Desenvolvedor de sistemas, estudante universitário de engenharia informática, com diploma do ensino médio em informática.",
+    "Education": "Educação",
+    "Work Experience": "Experiência de trabalho",
+    "university student in computer engineering": "Estudante universitário em Engenharia informática",
+    "Curiosities": "Curiosidades",
+    "Some facts about me": "Alguns factos sobre mim",
+    "About Work Experience": "Sobre Experiência Profissional",
+    "6 Month as an intern, I performed duties as a full-stack web developer, achieving a final grade of 18 out of 20.": "Durante 6 meses como estagiário, atuei como desenvolvedor web full-stack, obtendo nota final de 18 em 20.",
+    "Present ________ Profissional Freelancer": "Presente — Profissional Freelancer",
+    "6 Month _______ As an intern dev full stack at": "6 meses — Estagiário como desenvolvedor full stack na",
+    "See more": "ver mais",
+    "Some tools and tecs, used by me": "Algumas ferramentas e tecs usadas por mim",
+    "All": "Tudo",
+    "These are some of the technologies and tools I use in my projects, and Im currently studying some of them.": "Estas são algumas das tecnologias e ferramentas que utilizo nos meus projetos, e que atualmente estou estudando.",
+    "Studying": "Estudando",
+    "Private Polytechnic High School Institute": "Instituto Médio Politécnico Privado",
+    "Feel free to talk to me.": "Fique a vontade para conversar",
+    "Thank you so much for visiting my personal website! If you’d like to talk to me about anything at all, feel free to get in touch by clicking below! ;-)": "Muito obrigado por visitar o meu site pessoal! Se quiser conversar comigo sobre qualquer assunto, sinta-se à vontade para entrar em contato clicando abaixo! ;-)",
+    "Name": "Nome",
+    "Phone number": "Número de telefone",
+    "Message": "Mensagem",
+    "Every message submitted is read only by me (Dionísio Neto).": "Todas as mensagens enviadas são lidas apenas por mim (Dionísio Neto).",
+    "Send message": "Enviar mensagem",
+    "Send me an email": "Me envia uma mensagem",
+    "Call or message me": "Ligue ou envia mensagem",
+    "You re welcome to share any questions, concerns, or anything else you d like to discuss ;-)": "Esteje a vontade para compartilhar qualquer dúvida, preocupação ou qualquer outro assunto que queira discutir ;-)",
+    "High school diploma in computer science.": "Com diploma do ensino médio em informática.",
+    "Enter your phone name": "Digite seu nome",
+    "Enter your phone email": "Digite seu email",
+    "Enter your phone number": "Digite seu número de telefone",
+    "Enter your message": "Digite sua mensagem",
+    "see resume": "Ver currículo",
+    "Resume": "Currículo",
+    "about_me": {
+        "title": "Sobre mim",
+        "content": "Estou sempre me esforçando para dar o meu melhor, aprender com os outros e entregar com qualidade. Gosto de experiências colaborativas, concluir desafios e deixar tudo bem resolvido — sem esquecer da atenção aos detalhes."
+    },
+    "Efficiency":{
+        "title": "Eficiência",
+        "content": "Desenvolvo rapidamente, seguindo todas as etapas e processos do desenvolvimento de software, cumprindo consistentemente os prazos."
+    },
+    "Learning_Culture":{
+        "title": "Cultura de Aprendizado",
+        "content": "Entusiasta de tecnologia desde sempre, estou sempre em busca de melhorar minhas habilidades existentes e aprender coisas novas — explorando constantemente maneiras melhores de escrever código limpo e eficiente."
+    },
+    "Web_Development":{
+        "title": "Desenvolvimento",
+        "content": "Crio aplicações completas (Full Stack), responsivas, acessíveis e de alto desempenho utilizando tecnologias modernas, com forte foco na qualidade do código."
+    },
+    "Developed by": "Desenvolvido por"
+}
