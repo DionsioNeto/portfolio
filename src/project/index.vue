@@ -44,18 +44,27 @@
       <div class="h-40 w-40 rounded-full border-2 border-neutral-500 relative overflow-hidden mt-10">
         <img src="../assets/img/dn.jpg" alt="Dionísio Neto" class="absolute w-full h-full object-cover">
       </div>
-      <h1 class="text-5xl font-bold text-center max-w-120">Hey, I'm Dionísio Neto, a systems developer.</h1>
+      <h1 class="text-5xl font-bold text-center max-w-120">
+        {{ $t('Hey, I am Dionísio Neto, a systems developer.') }}
+      </h1>
       <p class="font-semibold max-w-140 text-center text-neutral-700">
-        I’m looking for an opportunity to contribute to the development of dynamic and innovative projects, using my technical skills, strong desire to learn new things, and grow into an increasingly skilled professional.
+        {{ $t('System developer, university student in computer engineering, with a high school diploma in computer science.') }}
       </p>
       <div class="flex gap-3 items-center">
-        <RouterLink to="/contact" class="flex  gap-3 dark:bg-white bg-black dark:text-black text-white rounded-md py-2 px-3 font-bold" title="Say with me!"><MessagesSquare/>Say with me!</RouterLink>
+        <RouterLink 
+          to="/contact" 
+          class="flex  gap-3 dark:bg-white bg-black dark:text-black text-white rounded-md py-2 px-3 font-bold" 
+          title="Say with me!"
+        >
+          <MessagesSquare/>
+          {{ $t('Say with me') }}
+        </RouterLink>
         <div class="text-sky-500 flex items-center gap-2 font-medium">
           <span class="relative flex size-3">
             <span class="absolute flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
             <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span>
           </span>
-          Available for work
+          {{ $t('Available for work') }}
         </div>
       </div>
       <div class="flex gap-3 items-center">
@@ -88,33 +97,35 @@
    
     <section class="flex flex-col md:flex-row gap-7 px-5 sm:px-15 py-15">
       <div class="w-full">
-        <h1 class="text-3xl font-bold mb-2">About Work Experience</h1>
+        <h1 class="text-3xl font-bold mb-2">{{ $t('About Work Experience') }}</h1>
         <p class="text-neutral-500 font-medium inline-block">
-          6 Month as an intern, I performed duties as a full-stack web developer, achieving a final grade of 18 out of 20.
+          {{ $t('6 Month as an intern, I performed duties as a full-stack web developer, achieving a final grade of 18 out of 20.') }}
           <RouterLink 
             class="text-blue-500"
             to="/about"
           >
-            See more 
+            {{ $t('See more') }}
             <MoveRight :size="20" class="inline"/>
           </RouterLink>
         </p>
       </div>
 
       <div class="w-full">
-        <h1 class="text-3xl font-bold mb-2">Work Experience</h1>
+        <h1 class="text-3xl font-bold mb-2">{{ $t('Work Experience') }}</h1>
         <div class="">
-          <p class="text-neutral-500 font-medium">Present ________ Profissional Freelancer</p>
-          <p class="text-neutral-500 font-medium">6 Month _______ As an intern dev full stack at <span class="text-blue-500 font-bold">POBU  Bussnes</span> </p>
+          <p class="text-neutral-500 font-medium">
+            {{ $t('Present ________ Profissional Freelancer') }}
+          </p>
+          <p class="text-neutral-500 font-medium">{{ $t('6 Month _______ As an intern dev full stack at') }} <span class="text-blue-500 font-bold">POBU  Business</span> </p>
         </div>
       </div>
     </section>
 
     <section class="flex flex-col lg:flex-row gap-5 px-5 sm:px-15 py-10">
       <div class="w-full">
-        <h1 class="text-3xl font-bold mb-2">Some tools and tecs, used by me</h1>
+        <h1 class="text-3xl font-bold mb-2">{{ $t('Some tools and tecs, used by me') }}</h1>
         <p class="text-neutral-500 font-medium">
-          These are some of the technologies and tools I use in my projects, and I’m currently studying some of them.
+          {{ $t('These are some of the technologies and tools I use in my projects, and Im currently studying some of them.') }}
         </p>
         <div class="flex justify-center items-center w-full py-5">
           <div class="dark:bg-white bg-black rounded-full dark:text-black text-white flex justify-between items-center w-fil p-1 font-bold">
@@ -124,7 +135,7 @@
                 ? 'cursor-pointer px-4 p-1 rounded-full dark:text-black text-white' 
                 : 'cursor-pointer px-4 p-1 rounded-full dark:text-white text-black dark:bg-black bg-white'"
             >
-              All
+              {{ $t('All') }}
             </div>
             <div 
               @click="langTec = false"
@@ -133,7 +144,7 @@
                 ? 'cursor-pointer px-4 p-1 rounded-full dark:text-white text-black dark:bg-black bg-white' 
                 : 'cursor-pointer p-1 px-4'"
             >
-                Studying
+                {{ $t('Studying') }}
             </div>
           </div>
         </div>
@@ -263,8 +274,17 @@
     </section>
 
     <section class=" container m-auto flex flex-col gap-7 justify-center items-center px-5 py-10">
-      <p class="text-center max-w-110 font-medium">Thank you so much for visiting my personal website! If you’d like to talk to me about anything at all, feel free to get in touch by clicking below! ;-) </p>
-      <RouterLink to="/contact" class="flex gap-3 dark:bg-white bg-black dark:text-black text-white rounded-md py-2 px-3 font-bold" title="Say with me!"><MessagesSquare/>Say with me!</RouterLink>
+      <p class="text-center max-w-110 font-medium">
+        {{ $t('Thank you so much for visiting my personal website! If you’d like to talk to me about anything at all, feel free to get in touch by clicking below! ;-)') }}
+      </p>
+      <RouterLink 
+        to="/contact" 
+        class="flex gap-3 dark:bg-white bg-black dark:text-black text-white rounded-md py-2 px-3 font-bold" 
+        title="Say with me!"
+      >
+        <MessagesSquare/>
+        {{ $t('Say with me') }}
+      </RouterLink>
     </section>
     <TheFooter />
   </main>
