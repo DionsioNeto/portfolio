@@ -5,7 +5,7 @@
 <template>
     <footer class="container m-auto p-5 flex justify-between flex-col sm:flex-row items-center gap-5">
         <div class="text-neutral-500 font-semibold text-xs">Dionísio Neto &copy; {{ YearNow }}</div>
-        <div class="text-neutral-500 font-semibold text-xs">Developed by <strong>Dionísio Neto</strong></div>
+        <div class="text-neutral-500 font-semibold text-xs">{{ $t('Developed by') }} <strong>Dionísio Neto</strong></div>
         <div class="flex gap-4">
             <a 
                 href="https://www.linkedin.com/in/dion%C3%ADsioneto/" 
