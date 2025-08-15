@@ -42,25 +42,25 @@ function share(content) {
 </script>
 
 <template>
-    <main class="sm:w-[65vw] m-auto border-l border-r border-neutral-500 p-4">
+    <main class="sm:w-[65vw] m-auto border-l border-r border-neutral-500">
         <theHeader />
-        <h1 class="text-4xl font-black text-center my-5">Contact</h1>
-        <div class="grid md:grid-cols-2 gap-4 h-auto">
+        <h1 class="text-4xl font-black text-center my-5">{{ $t('Contact') }}</h1>
+        <div class="grid md:grid-cols-2 gap-4 h-auto p-4">
             <div class="row-span-2 border-2 border-neutral-700/50 p-5 rounded-lg w-full h-full font-medium">
-                <h1 class="text-2xl text-neutral-600 font-semibold">Feel free to talk to me.</h1>
-                <p class="text-xs font-bold">
-                    You're welcome to share any questions, concerns, or anything else you'd like to discuss ;-)
+                <h1 class="font-semibold text-2xl">{{ $t('Feel free to talk to me.') }}</h1>
+                <p class="text-neutral-600 text-xs font-bold">
+                    {{ $t('You re welcome to share any questions, concerns, or anything else you d like to discuss ;-)') }}
                 </p>
                 <form action="https://formsubmit.co/dionisioni304@gmail.com" method="POST">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_next" value="https://dionisio-neto.netlify.app/message-send">
                     <div class="flex flex-col gap-2">
                         <div class="flex flex-col gap-1">
-                            <label for="Name">Name</label>
+                            <label for="Name">{{ $t('Name') }}</label>
                             <input 
                                 type="text" 
                                 name="name"
-                                placeholder="Enter your name" 
+                                :placeholder="$t('Enter your phone name')"
                                 id="Name" 
                                 class="border-2 dark:bg-neutral-800/50 border-neutral-800 p-1 rounded-lg"
                             >
@@ -71,35 +71,35 @@ function share(content) {
                                 <input 
                                     type="text" 
                                     name="email" 
-                                    placeholder="Enter your email" 
+                                    :placeholder="$t('Enter your phone email')"
                                     id="email" 
                                     class="border-2 dark:bg-neutral-800/50 border-neutral-800 p-1 w-full rounded-lg"
                                 >
                             </div>
                             <div class="flex flex-col gap-1 w-full">
-                                <label for="numbber">Phone number</label>
+                                <label for="numbber">{{ $t('Phone number') }}</label>
                                 <input 
                                     type="text" 
                                     name="phone"
-                                    placeholder="Enter your phone number" 
+                                    :placeholder="$t('Enter your phone number')"
                                     id="numbber" 
                                     class="border-2 dark:bg-neutral-800/50 border-neutral-800 p-1 w-full rounded-lg"
                                 >
                             </div>
                         </div>
                         <div class="flex flex-col gap-1">
-                            <label for="message">Message</label>
+                            <label for="message">{{ $t('Message') }}</label>
                             <textarea 
                                 name="message"
-                                placeholder="Enter your message" 
+                                :placeholder="$t('Enter your message')"
                                 id="message" 
                                 class="border-2 dark:bg-neutral-800/50 border-neutral-800 p-1 h-34 rounded-lg"
                             ></textarea>
-                            <p class="text-xs">Every message submitted is read only by me (Dionísio Neto).</p>
+                            <p class="text-xs">{{ $t('Every message submitted is read only by me (Dionísio Neto).') }}</p>
                         </div>
-                        <button type="submit" class="dark:bg-white bg-black dark:text-black text-white flex items-center gap-2 font-semibold rounded-lg p-1.5 w-36">
+                        <button type="submit" class="dark:bg-white bg-black dark:text-black text-white flex items-center gap-2 font-semibold rounded-lg p-1.5 w-fit">
                             <Send :size="18"/>
-                            Send message
+                            {{ $t('Send message') }}
                         </button>
                     </div>
                 </form>
@@ -110,7 +110,7 @@ function share(content) {
                     <Mail :size="210" color="#4a4a4a" />
                 </div>
 
-                <h1>Email Me</h1>
+                <h1>{{ $t('Send me an email') }}</h1>
                 <a  :href="`mailto:${email}`">{{ email }}</a>
 
                 <div class="flex gap-2">
@@ -135,7 +135,7 @@ function share(content) {
                 <div class="absolute -top-10 -right-10 -rotate-25 -z-2">
                     <Smartphone :size="210" color="#4a4a4a"/>
                 </div>
-                <h1>Call or message me / whatsApp</h1>
+                <h1>{{ $t('Call or message me') }} / whatsApp</h1>
                 <a :href="`tel:${number}`">{{ number }}</a>
                 <div class="flex gap-2">
                     <div 
@@ -153,6 +153,6 @@ function share(content) {
                 </div>
             </div>
         </div>
-    <theFooter />
+        <theFooter />
     </main>
 </template>
