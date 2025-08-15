@@ -19,20 +19,20 @@
 
   const items = [
     {
-      title: 'About me',
-      content: 'I’m always striving to do my best, learn from others, and deliver with quality. I enjoy collaborative experiences, closing challenges, and leaving everything well-resolved — without forgetting attention to detail.'
+      title: 'about_me.title',
+      content: 'about_me.content'
     },
     {
-      title: 'Efficiency',
-      content: 'I develop quickly while following all steps and processes of software development, consistently meeting deadlines.'
+      title: 'Efficiency.title',
+      content: 'Efficiency.content'
     },
     {
-      title: 'Learning Culture',
-      content: 'A lifelong technology enthusiast, I’m always looking to improve my existing skills and learn new things — constantly exploring better ways to write clean and efficient code.'
+      title: 'Learning_Culture.title',
+      content: 'Learning_Culture.content'
     },
     {
-      title: 'Web Development',
-      content: 'I build complete (Full Stack), responsive, accessible, and high-performance applications using modern technologies, with a strong focus on quality of code.'
+      title: 'Web_Development.title',
+      content: 'Web_Development.content'
     }
   ]
 
@@ -49,13 +49,13 @@
     <theHeader />
     <section class="px-5 sm:px-15 pt-25">
       <div class="flex flex-row gap-4 ">
-        <div class="">
-          <img src="../assets/img/dn3.jpg" alt="Dionísio Neto" class="max-w-20 md:max-w-40 rounded-xl">
+        <div class="max-w-20 md:max-w-40  rounded-xl overflow-hidden relative">
+          <img src="../assets/img/dn3.jpg" alt="Dionísio Neto" class="w-full">
         </div>
         <div class="w-full">
           <h1 class="text-3xl font-bold mb-2">Dionísio Neto</h1>
           <p class="text-neutral-500 font-medium">
-            System developer, university student in computer engineering, with a high school diploma in computer science.
+            {{ $t('System developer, university student in computer engineering, with a high school diploma in computer science.') }}
           </p>
           <div class="flex gap-3 items-center">
             <a
@@ -88,33 +88,47 @@
               <span class="absolute flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
               <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span>
             </span>
-              Available for work
+              {{ $t('Available for work') }}
           </div>
         </div>
       </div>
 
       <div class="w-full mt-5">
-        <h1 class="text-3xl font-bold mb-2">About</h1>
+        <h1 class="text-3xl font-bold mb-2">{{ $t('About') }}</h1>
         <p class="text-neutral-500 font-medium">
-          I’m Dionísio Neto, an aspiring IT professional passionate about solving problems and creating innovative solutions. I hold a high school diploma in computer science and am currently pursuing a degree in computer engineering. With a strong foundation in technology and a drive to learn, I’m ready to bring value, creativity, and dedication to any challenge in the IT field.
+          {{ $t('about me') }}
         </p>
       </div>
       
       <div class="w-full mt-5">
-        <h1 class="text-3xl font-bold mb-2">Work Experience</h1>
+        <h1 class="text-3xl font-bold mb-2">{{ $t('Work Experience') }}</h1>
         <div class="">
-          <p class="text-neutral-500 font-medium">Present ________ Profissional Freelancer</p>
-          <p class="text-neutral-500 font-medium">6 Month _______ As an intern dev full stack at <span class="text-blue-500 font-bold">POBU  Bussnes</span> </p>
+          <p class="text-neutral-500 font-medium">{{ $t('Present ________ Profissional Freelancer') }}</p>
+          <p class="text-neutral-500 font-medium">
+            {{ $t('6 Month _______ As an intern dev full stack at') }} 
+            <a 
+              target="_blank" 
+              href="https://pobuc.com"
+            >
+              <span class="text-blue-500 font-bold underline">
+                POBU  Business
+                <MoveUpRight :size="18" class=" inline-block"/>
+              </span> 
+            </a>
+          </p>
         </div>
       </div>
 
       <div class="w-full mt-5">
-        <h1 class="text-3xl font-bold mb-2">Education</h1>
+        <h1 class="text-3xl font-bold mb-2">{{ $t('Education') }}</h1>
         <ul class="flex flex-col gap-2">
           <li>
-            <a href="#">
+            <a 
+              target="_blank" 
+              href="#"
+            >
               <div class=" font-medium">
-                university student in computer engineering
+                {{ $t('university student in computer engineering')}}
               </div>
               <div class="hover:text-neutral-600 underline">
                 ...
@@ -124,12 +138,15 @@
             <div class="text-neutral-500">2024/2025 _______ Present</div>
           </li>
           <li>
-            <a href="https://share.google/McBFr5S3UQNnWyP2F">
+            <a
+              target="_blank" 
+              href="https://share.google/McBFr5S3UQNnWyP2F"
+            >
               <div class=" font-medium">
-                High school diploma in computer science.
+                {{ $t('High school diploma in computer science.') }}
               </div>
               <div class="hover:text-neutral-600 underline">
-                Instituto Médio Politécnico Privado ANHERC (IMPPA)
+                {{ $t('Private Polytechnic High School Institute') }} ANHERC (IMPPA)
                 <MoveUpRight :size="18" class=" inline-block"/>
               </div>
             </a>
@@ -139,8 +156,8 @@
       </div>
     </section>
     <section class="px-5 sm:px-15 mt-5">
-      <h1 class="text-3xl font-bold mb-2">Curiosities</h1>
-        <p class="text-neutral-500 font-medium">Some facts about me</p>
+      <h1 class="text-3xl font-bold mb-2">{{ $t('Curiosities')}}</h1>
+        <p class="text-neutral-500 font-medium">{{ $t('Some facts about me') }}</p>
       <div
         v-for="(item, index) in items"
         :key="index"
@@ -148,7 +165,7 @@
       >
         <div @click="toggle(index)" class="flex items-center justify-between bg-neutral-300 dark:bg-neutral-900 my-2 p-2 rounded-lg">
           <h2 class="text-lg font-semibold">
-            {{ item.title }}
+            {{ $t(item.title) }}
           </h2>
           <X
             :class="[
@@ -163,7 +180,7 @@
             v-show="openIndex === index"
             class="mt-2 mx-2 text-sm leading-relaxed font-medium text-neutral-600"
           >
-            {{ item.content }}
+            {{ $t(item.content) }}
           </div>
         </transition>
       </div>
@@ -174,8 +191,8 @@
       @click="showModal = true"
       class="w-full flex justify-center items-center py-2 cursor-pointer"
     >
-      <div class="dark:bg-white bg-black rounded-full dark:text-black text-white flex justify-between items-center w-34 p-1">
-          <div class="font-bold">see resume</div>
+      <div class="dark:bg-white bg-black rounded-full dark:text-black text-white flex justify-between gap-2 items-center w-fit p-1">
+          <div class="font-bold">{{ $t('see resume') }}</div>
           <div class="dark:bg-black bg-white p-1 rounded-full dark:text-white text-black">
               <MoveUpRight />
           </div>
@@ -185,7 +202,7 @@
     <teleport to="body">
       <Modal :show="showModal" @close="showModal = false">
         <template #header>
-          Resume
+          {{ $t('Resume') }}
         </template>
 
         <template #body>
