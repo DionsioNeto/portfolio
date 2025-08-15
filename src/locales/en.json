@@ -1,0 +1,59 @@
+{
+    "Home": "Home",
+    "Contact": "Contact",
+    "About": "About",
+    "Available for work": "Available for work",
+    "Say with me": "Say with me",
+    "Hey, I am Dionísio Neto, a systems developer.": "Hey, I'm Dionísio Neto.",
+    "System developer, university student in computer engineering, with a high school diploma in computer science.": "System developer, university student in computer engineering, with a high school diploma in computer science.",
+    "about me": "I’m Dionísio Neto, an aspiring IT professional passionate about solving problems and creating innovative solutions. I hold a high school diploma in computer science and am currently pursuing a degree in computer engineering. With a strong foundation in technology and a drive to learn, I’m ready to bring value, creativity, and dedication to any challenge in the IT field.",
+    "Education": "Education",
+    "Work Experience": "Work Experience",
+    "university student in computer engineering": "university student in computer engineering",
+    "Curiosities": "Curiosities",
+    "Some facts about me": "Some facts about me",
+    "About Work Experience": "About Work Experience",
+    "6 Month as an intern, I performed duties as a full-stack web developer, achieving a final grade of 18 out of 20.": "6 Month as an intern, I performed duties as a full-stack web developer, achieving a final grade of 18 out of 20.",
+    "Present ________ Profissional Freelancer": "Present ________ Profissional Freelancer",
+    "6 Month _______ As an intern dev full stack at": "6 Month _______ As an intern dev full stack at",
+    "See more": "see more",
+    "Some tools and tecs, used by me": "Some tools and tecs, used by me",
+    "All": "All",
+    "These are some of the technologies and tools I use in my projects, and Im currently studying some of them.": "These are some of the technologies and tools I use in my projects, and Im currently studying some of them.",
+    "Studying": "Studying",
+    "Private Polytechnic High School Institute": "Private Polytechnic High School Institute",
+    "Feel free to talk to me.": "Feel free to talk to me.",
+    "Thank you so much for visiting my personal website! If you’d like to talk to me about anything at all, feel free to get in touch by clicking below! ;-)": "Thank you so much for visiting my personal website! If you’d like to talk to me about anything at all, feel free to get in touch by clicking below! ;-)",
+    "High school diploma in computer science.": "High school diploma in computer science.",
+    "Name": "Name",
+    "Phone number": "Phone number",
+    "Message": "Message",
+    "Every message submitted is read only by me (Dionísio Neto).": "Every message submitted is read only by me (Dionísio Neto).",
+    "Send message": "Send message",
+    "Send me an email": "Send me an email",
+    "Call or message me": "Call or message me",
+    "You re welcome to share any questions, concerns, or anything else you d like to discuss ;-)": "You're welcome to share any questions, concerns, or anything else you'd like to discuss ;-)",
+    "Enter your phone name": "Enter your phone name",
+    "Enter your phone email": "Enter your phone email",
+    "Enter your phone number": "Enter your phone number",
+    "Enter your message": "Enter your message",
+    "see resume": "see resume",
+    "Resume": "Resume",
+    "about_me": {
+        "title": "About me",
+        "content": "I’m always striving to do my best, learn from others, and deliver with quality. I enjoy collaborative experiences, closing challenges, and leaving everything well-resolved — without forgetting attention to detail."
+    },
+    "Efficiency":{
+        "title": "Efficiency",
+        "content": "I develop quickly while following all steps and processes of software development, consistently meeting deadlines."
+    },
+    "Learning_Culture":{
+        "title": "Learning Culture",
+        "content": "A lifelong technology enthusiast, I’m always looking to improve my existing skills and learn new things — constantly exploring better ways to write clean and efficient code."
+    },
+    "Web_Development":{
+        "title": "Development",
+        "content": "I build complete (Full Stack), responsive, accessible, and high-performance applications using modern technologies, with a strong focus on quality of code."
+    },
+    "Developed by": "Developed by"
+}
