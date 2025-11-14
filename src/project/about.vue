@@ -5,7 +5,7 @@
   import InconXTwitter from '@/icon/InconXTwitter.vue';
   import IconLinkedin from '@/icon/IconLinkedin.vue';
   import Modal from '../components/modal.vue';
-  import { MoveUpRight, X, Download } from 'lucide-vue-next';
+  import { MoveUpRight, X, Download, CircleQuestionMark, Eye } from 'lucide-vue-next';
 
   import { ref } from 'vue';
   const toggleModal = ref(false)
@@ -42,15 +42,13 @@
     openIndex.value = openIndex.value === index ? null : index
   }
 </script>
-
 <template>
-
   <main class="sm:w-[65vw] m-auto border-l border-r border-neutral-500 -mt-10">
     <theHeader />
     <section class="px-5 sm:px-15 pt-25">
       <div class="flex flex-row gap-4 ">
-        <div class="max-w-20 md:max-w-40  rounded-xl overflow-hidden relative">
-          <img src="../assets/img/dn3.jpg" alt="Dionísio Neto" class="w-full">
+        <div class="w-24 md:w-40  overflow-hidden relative rotate-10">
+          <img src="../assets/img/dn3.jpg" alt="Dionísio Neto" class="w-full rounded-xl">
         </div>
         <div class="w-full">
           <h1 class="text-3xl font-bold mb-2">Dionísio Neto</h1>
@@ -92,14 +90,12 @@
           </div>
         </div>
       </div>
-
       <div class="w-full mt-5">
         <h1 class="text-3xl font-bold mb-2">{{ $t('About') }}</h1>
         <p class="text-neutral-500 font-medium">
           {{ $t('about me') }}
         </p>
       </div>
-      
       <div class="w-full mt-5">
         <h1 class="text-3xl font-bold mb-2">{{ $t('Work Experience') }}</h1>
         <div class="">
@@ -118,24 +114,23 @@
           </p>
         </div>
       </div>
-
       <div class="w-full mt-5">
         <h1 class="text-3xl font-bold mb-2">{{ $t('Education') }}</h1>
         <ul class="flex flex-col gap-2">
           <li>
             <a 
               target="_blank" 
-              href="#"
+              href="https://isia.co.ao"
             >
               <div class=" font-medium">
                 {{ $t('university student in computer engineering')}}
               </div>
               <div class="hover:text-neutral-600 underline">
-                ...
+                {{ $t('International Polytechnic Institute Of Angola (ISIA)' )}}
                 <MoveUpRight :size="18" class=" inline-block"/>
               </div>
             </a>
-            <div class="text-neutral-500">2024/2025 _______ Present</div>
+            <div class="text-neutral-500">2025/2026 _______ Present</div>
           </li>
           <li>
             <a
@@ -185,8 +180,6 @@
         </transition>
       </div>
     </section>
-
-
     <section 
       @click="showModal = true"
       class="w-full flex justify-center items-center py-2 cursor-pointer"
@@ -198,7 +191,6 @@
           </div>
       </div>
     </section>
-
     <teleport to="body">
       <Modal :show="showModal" @close="showModal = false">
         <template #header>
@@ -206,22 +198,51 @@
         </template>
 
         <template #body>
-          <img src="../assets/img/dn3.jpg" alt="Dionísio Neto" class="max-w-20 md:max-w-full rounded-xl">
+          <div class="flex justify-center items-center flex-col">
+            <CircleQuestionMark :size="50"/>
+            <p class="">Download {{ $t('Resume') }}?</p>
+          </div>
         </template>
-
         <template #footer>
-          <button
-            class=""
-            @click="$emit('close')"
-          >
-            <Download/>
-          </button>
+          <div class="flex justify-center items-center gap-2">
+            <a href="../src/assets/pdf/Dionísio CV.pdf" download>
+              <button
+                class="flex items-center gap-2 bg-black dark:bg-white dark:text-black text-white p-1 rounded-md font-bold dark:hover:bg-neutral-300 cursor-pointer hover:bg-neutral-900"
+                @click="$emit('close')"
+              >
+                <Download :size="20"/> Download PT
+              </button>
+            </a>
+            <a href="../src/assets/pdf/Dionísio CV en.pdf" download>
+              <button
+                class="flex items-center gap-2 bg-black dark:bg-white dark:text-black text-white p-1 rounded-md font-bold dark:hover:bg-neutral-300 cursor-pointer hover:bg-neutral-900"
+                @click="$emit('close')"
+              >
+                <Download :size="20"/> Download EN
+              </button>
+            </a>
+          </div>
+          <div class="flex justify-center items-center gap-2 mt-2">
+            <a href="../src/assets/pdf/Dionísio CV.pdf" target="_blank">
+              <button
+                class="flex items-center gap-2 bg-black dark:bg-white dark:text-black text-white p-1 rounded-md font-bold dark:hover:bg-neutral-300 cursor-pointer hover:bg-neutral-900"
+                @click="$emit('close')"
+              >
+                <Eye :size="20"/> {{ $t('see resume') }} PT <MoveUpRight :size="15"/>
+              </button>
+            </a>
+            <a href="../src/assets/pdf/Dionísio CV en.pdf" target="_blank">
+              <button
+                class="flex items-center gap-2 bg-black dark:bg-white dark:text-black text-white p-1 rounded-md font-bold dark:hover:bg-neutral-300 cursor-pointer hover:bg-neutral-900"
+                @click="$emit('close')"
+              >
+                <Eye :size="20"/> {{ $t('see resume') }} EN <MoveUpRight :size="15"/>
+              </button>
+            </a>
+          </div>
         </template>
       </Modal>
-    </teleport>
-    
-    
-     
+    </teleport>     
     <the-footer/>
   </main>
 </template>

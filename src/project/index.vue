@@ -1,7 +1,7 @@
 <script setup>
   import theHeader from '../components/theHeader.vue';
   import TheFooter from '../components/theFooter.vue';
-  import { Linkedin, MessagesSquare, X, MoveRight } from 'lucide-vue-next';
+  import { Linkedin, MessagesSquare, X, MoveRight, Download } from 'lucide-vue-next';
   import IconHtml from '@/icon/IconHtml.vue';
   import IconCss from '@/icon/IconCss.vue';
   import IconJs from '@/icon/IconJs.vue';
@@ -34,15 +34,31 @@
   import IconJava from '@/icon/IconJava.vue';
   import IconSpringBot from '@/icon/IconSpringBot.vue';
   import { ref } from 'vue'
-
   const langTec = ref(true)
+
+
+
+    import Modal from '../components/modal.vue';
+
+  const toggleModal = ref(false)
+
+  function nn(){
+    toggleModal.value = !toggleModal.value
+  }
+
+  const showModal = ref(false)
 </script>
 <template>
   <main class="sm:w-[65vw] m-auto border-l border-r border-neutral-500 -mt-10">
     <theHeader />
-    <section class="flex flex-col gap-5 justify-center items-center p-5 min-h-[100vh]">
+    <section class="flex flex-col gap-5 justify-center items-center p-2 min-h-[100vh]">
       <div class="h-40 w-40 rounded-full border-2 border-neutral-500 relative overflow-hidden mt-10">
-        <img src="../assets/img/dn.jpg" alt="Dionísio Neto" class="absolute w-full h-full object-cover">
+        <img
+          @click="showModal = true" 
+          src="../assets/img/dn.jpg" 
+          alt="Dionísio Neto" 
+          class="absolute w-full h-full object-cover"
+        >
       </div>
       <h1 class="text-5xl font-bold text-center max-w-120">
         {{ $t('Hey, I am Dionísio Neto, a systems developer.') }}
@@ -53,7 +69,7 @@
       <div class="flex gap-3 items-center">
         <RouterLink 
           to="/contact" 
-          class="flex  gap-3 dark:bg-white bg-black dark:text-black text-white rounded-md py-2 px-3 font-bold" 
+          class="flex items-center gap-3 dark:bg-white bg-black dark:text-black text-white rounded-md py-2 px-1 font-bold" 
           title="Say with me!"
         >
           <MessagesSquare/>
@@ -286,6 +302,40 @@
         {{ $t('Say with me') }}
       </RouterLink>
     </section>
+    <teleport to="body">
+      <Modal :show="showModal" @close="showModal = false">
+        <template #header>
+          Me 
+        </template>
+
+        <template #body>
+          <div class="w-full h-[60vh] rounded-xl relative overflow-hidden">
+            <img 
+              src="../assets/img/dn.jpg" 
+              alt="Dionísio Neto"  
+              class="w-full h-full absolute top-0 object-cover"
+            >
+          </div>
+        </template>
+      </Modal>
+    </teleport>
     <TheFooter />
   </main>
 </template>
+
+<style scoped>
+.accordion-enter-active,
+.accordion-leave-active {
+  transition: all 0.3s ease;
+}
+.accordion-enter-from,
+.accordion-leave-to {
+  opacity: 0;
+  max-height: 0;
+}
+.accordion-enter-to,
+.accordion-leave-from {
+  opacity: 1;
+  max-height: 200px;
+}
+</style>

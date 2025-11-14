@@ -8,7 +8,7 @@
   <Transition name="modal">
     <div 
         v-if="show" 
-        class="fixed z-998 top-0 left-0 w-full h-full bg-neutral-800/70 flex transition-opacity ease-in backdrop-blur-xs"
+        class="fixed z-998 top-0 left-0 w-full min-h-screen bg-neutral-800/70 flex transition-opacity ease-in backdrop-blur-xs"
     >
       <div class="w-80 m-auto bg-neutral-100  dark:bg-neutral-900 rounded-lg shadow transition ease-in">
         <div class="border-b border-gray-500 p-2 flex justify-between items-center text-lg font-bold">
