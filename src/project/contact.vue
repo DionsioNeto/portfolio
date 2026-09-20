@@ -49,7 +49,7 @@ function share(content) {
                 <p class="text-neutral-600 text-xs font-bold">
                     {{ $t('You re welcome to share any questions, concerns, or anything else you d like to discuss ;-)') }}
                 </p>
-                <form action="https://formsubmit.co/dionisiovouca304@gmail.com" method="POST">
+                <form action="https://formsubmit.co/dionisiovouca@gmail.com" method="POST">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_next" value="https://dionisio-neto.netlify.app/message-send">
                     <div class="flex flex-col gap-2">
