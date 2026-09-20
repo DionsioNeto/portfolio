@@ -5,8 +5,8 @@ import { Copy,CopyCheck , Share2, Send, Mail, Smartphone } from 'lucide-vue-next
 import { ref } from 'vue';
 const copiedEmail = ref(false)
 const copiedNumber = ref(false)
-const email = 'dionisioni304@gmail.com'
-const number = '+244 923 287 660'
+const email = 'dionisiovouca@gmail.com'
+const number = '+244 923 012 721'
 
 function copyEmailToClipboard() {
   navigator.clipboard.writeText(email)
@@ -26,7 +26,6 @@ function copyNumberToClipboard() {
     }, 2000)
 }
 
-// Partilha (genérica)
 function share(content) {
   if (navigator.share) {
     navigator.share({
@@ -40,7 +39,6 @@ function share(content) {
   }
 }
 </script>
-
 <template>
     <main class="sm:w-[65vw] m-auto border-l border-r border-neutral-500">
         <theHeader />
@@ -51,7 +49,7 @@ function share(content) {
                 <p class="text-neutral-600 text-xs font-bold">
                     {{ $t('You re welcome to share any questions, concerns, or anything else you d like to discuss ;-)') }}
                 </p>
-                <form action="https://formsubmit.co/dionisioni304@gmail.com" method="POST">
+                <form action="https://formsubmit.co/dionisiovouca304@gmail.com" method="POST">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_next" value="https://dionisio-neto.netlify.app/message-send">
                     <div class="flex flex-col gap-2">
@@ -114,21 +112,19 @@ function share(content) {
                 <a  :href="`mailto:${email}`">{{ email }}</a>
 
                 <div class="flex gap-2">
-                <!-- BOTÃO DE COPIAR -->
-                <div
+                <button
                     class="border-2 border-neutral-700/50 p-1 rounded-lg bg-neutral-800/50 cursor-pointer"
                     @click="copyEmailToClipboard()"
                 >
                     <component :is="copiedEmail ? CopyCheck : Copy" class="w-5 h-5" />
-                </div>
+                </button>
 
-                <!-- BOTÃO DE PARTILHAR (exemplo) -->
-                <div 
+                <button 
                     @click="share(email)"
                     class="border-2 border-neutral-700/50 p-1 rounded-lg bg-neutral-800/50"
                 >
                     <Share2 class="w-5 h-5" />
-                </div>
+                </button>
                 </div>
             </div>
             <div class="border-2 border-neutral-700/50 p-5 rounded-lg w-full h-60 md:h-full flex justify-center items-center flex-col gap-2 relative overflow-hidden font-medium">
